@@ -8,7 +8,7 @@ $CONTROLLER_ANGLE: 20deg;
     width: 9.6rem;
     height: 5rem;
     vertical-align: middle;
-    margin: 1.5rem -1.3rem;
+    margin: 0 -1.3rem 1.3rem;
     @include transform(rotate(-$CONTROLLER_ANGLE));
 }
 
