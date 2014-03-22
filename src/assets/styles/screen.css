@@ -1,0 +1,315 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, base/_elements.scss */
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 5, base/_elements.scss */
+html {
+  font-size: 15px;
+}
+
+/* line 9, base/_elements.scss */
+body {
+  font-family: "Quicksand";
+  background: #565759;
+  text-align: center;
+  color: #99999b;
+}
+/* line 15, base/_elements.scss */
+body:before, body:after {
+  font: "Pompiere";
+  font-size: 1.4rem;
+  word-wrap: break-word;
+  overflow: hidden;
+  height: 4rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 -1.1rem;
+  text-align: center;
+  opacity: 0.25;
+}
+/* line 30, base/_elements.scss */
+body:before {
+  content: '1101001011010100001000001001011000001010000110100100011010011001001101010101010001000101100001000010010000010011010010010011011000100000110010000100100110100100101100000010001010010011001000100110110100010001000101101000100001011010010011010100110001000010100000110110110100011001001100010101010000000110100100001000100010100001100010010010011011000010101010000011';
+  top: 1rem;
+}
+/* line 35, base/_elements.scss */
+body:after {
+  content: '1101101000110010011000101010100000001101001000010001000101000011000100100100110110000101010100000111101001011010100001000001001011000001010000110100100011010011001001101010101010001000101100001000010010000010011010010010011011000100000110010000100100110100100101100000010001010010011001000100110110100010001000101101000100001011010010011010100110001000010100000110';
+  bottom: 4.4rem;
+}
+
+/* line 41, base/_elements.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 1, landmarks/nav/_nav.scss */
+.nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  position: fixed;
+  bottom: 0;
+  display: none;
+}
+
+/* line 8, landmarks/nav/_nav.scss */
+.navLink {
+  float: left;
+  background: rgba(0, 0, 0, 0.05);
+  margin: 0 0.15%;
+  width: 33%;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 50px;
+  height: 60px;
+  margin-bottom: -10px;
+  position: relative;
+  top: 0;
+  color: #99999b;
+  -webkit-transition: all, 100ms;
+  -moz-transition: all, 100ms;
+  -o-transition: all, 100ms;
+  transition: all, 100ms;
+}
+/* line 24, landmarks/nav/_nav.scss */
+.navLink:hover {
+  line-height: 60px;
+  top: -10px;
+  color: #98c9c3;
+}
+
+/* line 1, landmarks/main/_main.scss */
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  padding: 2rem;
+  -webkit-transform: translate(-50%, -55%);
+  -moz-transform: translate(-50%, -55%);
+  -ms-transform: translate(-50%, -55%);
+  -o-transform: translate(-50%, -55%);
+  transform: translate(-50%, -55%);
+}
+
+/* line 1, modules/hlist/_hlist.scss */
+.hList {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 5, modules/hlist/_hlist.scss */
+.hList > * {
+  float: left;
+}
+
+/* line 1, modules/slider/_slider.scss */
+.slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+/* line 6, modules/slider/_slider.scss */
+.slider > * {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+/* line 1, modules/txt/_txt.scss */
+.txt {
+  font-family: "Quicksand";
+  font-size: 2rem;
+  margin: 0 auto 1.5rem;
+}
+
+/* line 7, modules/txt/_txt.scss */
+.txt_huge {
+  font-family: "Pompiere";
+  font-size: 7.0rem;
+  color: #e0e9a7;
+  margin-bottom: 0.7rem;
+}
+
+/* line 14, modules/txt/_txt.scss */
+.txt_save {
+  font-family: "Pompiere";
+  font-size: 3.0rem;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+}
+
+/* line 21, modules/txt/_txt.scss */
+.txt_sub {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+/* line 26, modules/txt/_txt.scss */
+.txt_date {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  color: #98c9c3;
+}
+
+/* line 32, modules/txt/_txt.scss */
+.txt_url {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* line 37, modules/txt/_txt.scss */
+.txt_loc {
+  font-size: 2.3rem;
+  text-transform: uppercase;
+}
+
+/* line 1, modules/line/_line.scss */
+.line {
+  border: 0;
+  width: 30rem;
+  margin: 1.5rem auto;
+  height: 0.5rem;
+  overflow: hidden;
+  background: repeat-x 50%;
+  background-size: auto 100%;
+  max-width: 80%;
+}
+/* line 13, modules/line/_line.scss */
+.line:before {
+  font-size: 1.8rem;
+  content: '\2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022';
+  position: relative;
+  top: -0.3em;
+}
+
+/* line 9, modules/heart/_heart.scss */
+.heart {
+  position: relative;
+  width: 3.66rem;
+  height: 3rem;
+  display: inline-block;
+  font-size: 2.38095rem;
+  margin: 1.5rem auto;
+}
+
+/* line 18, modules/heart/_heart.scss */
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 50%;
+  width: 1.1em;
+  height: 1em;
+  background: #e0e9a7;
+  -webkit-border-radius: 100% 60% 100% 0;
+  -moz-border-radius: 100% 60% 100% 0;
+  -ms-border-radius: 100% 60% 100% 0;
+  -o-border-radius: 100% 60% 100% 0;
+  border-radius: 100% 60% 100% 0;
+  -webkit-transform: rotate(-27deg);
+  -moz-transform: rotate(-27deg);
+  -ms-transform: rotate(-27deg);
+  -o-transform: rotate(-27deg);
+  transform: rotate(-27deg);
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+/* line 34, modules/heart/_heart.scss */
+.heart:after {
+  -webkit-transform: scaleX(-1) rotate(-27deg);
+  -moz-transform: scaleX(-1) rotate(-27deg);
+  -ms-transform: scaleX(-1) rotate(-27deg);
+  -o-transform: scaleX(-1) rotate(-27deg);
+  transform: scaleX(-1) rotate(-27deg);
+}

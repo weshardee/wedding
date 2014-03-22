@@ -1,0 +1,7 @@
+.hList {
+    @include clearfix;
+}
+
+.hList > * {
+    float: left;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+    <!-- META DATA -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--[if IE]><meta http-equiv="cleartype" content="on" /><![endif]-->
+
+    <!-- SEO -->
+    <title>Amanda &amp; Wes</title>
+
+    <!-- STYLESHEETS -->
+    {{#block "styles"}}
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
+    <!-- build:css assets/styles/screen.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <link rel="stylesheet" media="screen, projection" href="assets/styles/screen.css" />
+    <!-- endbuild -->
+
+    {{/block}}
+</head>
+<body>
+    <div role="nav" class="nav">
+        <ul>
+            <li><a class="navLink" href="#/event">Event</a></li>
+            <li><a class="navLink" href="#/registry">Registry</a></li>
+            <li><a class="navLink" href="#/travel">Travel</a></li>
+        </ul>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="main">
+    {{#block "body"}}
+    {{/block}}
+    </div>
+
+    <!-- JAVASCRIPT -->
+    {{#block "scripts"}}
+    <script defer="defer" src="assets/scripts/main.js"></script>
+    <script src="http://localhost:35729/livereload.js"></script>
+
+    {{/block}}
+</body>
+</html>

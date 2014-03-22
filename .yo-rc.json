@@ -1,0 +1,94 @@
+{
+  "generator-nerdery": {
+    "title": "WES.Wedding",
+    "name": "wes-wedding",
+    "description": "My wedding website",
+    "version": "1.0.0",
+    "markup": "MarkupHandlebars",
+    "styles": "StylesVanilla",
+    "scripts": "ScriptsBrowserify",
+    "framework": "FrameworkVanilla",
+    "scriptsVanillaNamespace": "NRD",
+    "nerderyBower": {
+      "dependencies": {}
+    },
+    "nerderyCssLint": {},
+    "nerderyGrunt": {
+      "buildTask": [
+        "markup",
+        "styles",
+        "scripts"
+      ],
+      "copyConfig": [
+        "styles: {\n    files: [{\n        expand: true,\n        cwd: '<%= env.DIR_SRC %>',\n        dest: '<%= env.DIR_DEST %>',\n        src: ['assets/{styles,vendor}/**/*.css']\n    }]\n}"
+      ],
+      "docsTask": [],
+      "initConfig": [
+        "\n// -- Markup Tasks -----------------------------------------------------\n\nhbt: {\n    options: {\n        data: {\n            pkg: '<%= pkg %>',\n            env: '<%= env %>'\n        },\n        helpers: [\n            '<%= env.DIR_NPM %>/handlebars-layouts/handlebars-layouts.js'\n        ],\n        partials: [\n            '<%= env.DIR_SRC %>/templates/**/*.hbs'\n        ]\n    },\n    all: {\n        files: [{\n            expand: true,\n            cwd: '<%= env.DIR_SRC %>',\n            dest: '<%= env.DIR_TMP %>',\n            ext: '.html',\n            src: [\n                '**/*.hbs',\n                '!templates/**',\n                '!assets/vendor/**'\n            ]\n        }]\n    }\n},\n\nprettify: {\n    options: {\n        indent: 4,\n        indent_inner_html: false, // jshint ignore:line\n        unformatted: [\n            'a', 'b', 'code', 'i', 'p',\n            'pre', 'small', 'span',\n            'sub', 'sup', 'u'\n        ]\n    },\n    all: {\n        files: [{\n            expand: true,\n            cwd: '<%= env.DIR_TMP %>',\n            dest: '<%= env.DIR_DEST %>',\n            src: ['**/*.html']\n        }]\n    }\n}",
+        "\n// -- Style Tasks ------------------------------------------------------\n\ncssmin: {\n    options: {\n        banner: '<%= banner %>'\n    }\n}",
+        "\n// -- Script Tasks -----------------------------------------------------\n\nbrowserify: {\n    options: {\n        debug: grunt.option('maps'),\n        transform: [\n            'debowerify',\n            'decomponentify',\n            'deamdify',\n            'deglobalify'\n        ]\n    },\n    all: {\n        options: {\n            postBundleCB: function(err, src, next) {\n                next(err, grunt.config.process('<%= banner %>') + src);\n            }\n        },\n        files: [{\n            expand: true,\n            cwd: '<%= env.DIR_SRC %>',\n            dest: '<%= env.DIR_DEST %>',\n            src: ['assets/scripts/*.js']\n        }]\n    }\n}"
+      ],
+      "installTask": [
+        "bowerInstall"
+      ],
+      "lintTask": [],
+      "registerTask": [
+        "grunt.registerTask('markup', ['hbt', 'prettify']);",
+        "if (grunt.option('dev')) {\n    grunt.registerTask('styles', ['copy:styles']);\n} else {\n    grunt.registerTask('styles', ['useminPrepare', 'concat', 'cssmin', 'usemin']);\n}",
+        "grunt.registerTask('scripts', ['browserify']);"
+      ],
+      "watchConfig": [
+        "markup: {\n    files: ['<%= env.DIR_SRC %>/**/*.hbs'],\n    tasks: ['markup']\n}",
+        "styles: {\n    files: ['<%= env.DIR_SRC %>/assets/{styles,vendor}/**/*.css'],\n    tasks: ['styles']\n}",
+        "scripts: {\n    files: ['<%= env.DIR_SRC %>/assets/{scripts,vendor}/**/*.js'],\n    tasks: ['scripts']\n}"
+      ]
+    },
+    "nerderyJsHint": {
+      "node": true
+    },
+    "nerderyPackage": {
+      "dependencies": {
+        "handlebars": "1.3.0",
+        "handlebars-layouts": "0.2.0"
+      },
+      "devDependencies": {
+        "grunt-hbt": "0.1.0",
+        "grunt-prettify": "0.3.4",
+        "grunt-bower-install": "1.0.0",
+        "grunt-contrib-concat": "0.3.0",
+        "grunt-contrib-cssmin": "0.7.0",
+        "grunt-usemin": "2.0.2",
+        "deamdify": "0.1.1",
+        "debowerify": "0.3.0",
+        "decomponentify": "0.0.3",
+        "deglobalify": "0.2.0",
+        "grunt-browserify": "1.2.11"
+      }
+    },
+    "markupHandlebarsFeatures": {},
+    "markupContent": [],
+    "markupExtensionIn": "hbs",
+    "markupExtensionOut": "html",
+    "markupScripts": [
+      "<script src=\"assets/scripts/main.js\"></script>\n"
+    ],
+    "markupScriptsEntryPoint": "src/templates/layout.hbs",
+    "markupStyles": [
+      "<!-- build:css assets/styles/screen.css -->\n<!-- bower:css -->\n<!-- endbower -->\n<link rel=\"stylesheet\" media=\"screen, projection\" href=\"assets/styles/screen.css\" /><%\nyo.stylesImported.forEach(function(style) { %>\n<link rel=\"stylesheet\" media=\"screen, projection\" href=\"<%= style %>\" /><%\n}); %>\n<!-- endbuild --><%\nif (yo.stylesVanillaFeatures.ieConditional) { %>\n<!--[if IE 9]><link rel=\"stylesheet\" media=\"screen, projection\" href=\"assets/styles/ie9.css\" /><![endif]-->\n<!--[if lte IE 8]><link rel=\"stylesheet\" media=\"screen, projection\" href=\"assets/styles/ie8.css\" /><![endif]-->\n<!--[if lte IE 7]><link rel=\"stylesheet\" media=\"screen, projection\" href=\"assets/styles/ie7.css\" /><![endif]-->\n<!--[if lte IE 6]><link rel=\"stylesheet\" media=\"screen, projection\" href=\"assets/styles/ie6.css\" /><![endif]--><%\n}\nif (yo.stylesVanillaFeatures.mediaQueries) { %>\n<link rel=\"stylesheet\" media=\"screen and (min-width: 480px)\" href=\"assets/styles/screen_small.css\" />\n<link rel=\"stylesheet\" media=\"screen and (min-width: 768px)\" href=\"assets/styles/screen_medium.css\" />\n<link rel=\"stylesheet\" media=\"screen and (min-width: 992px)\" href=\"assets/styles/screen_large.css\" />\n<link rel=\"stylesheet\" media=\"screen and (min-width: 1382px)\" href=\"assets/styles/screen_huge.css\" /><%\n}\nif (yo.stylesVanillaFeatures.print) { %>\n<link rel=\"stylesheet\" media=\"print\" href=\"assets/styles/print.css\" /><%\n} %>\n"
+    ],
+    "markupStylesEntryPoint": "src/templates/layout.hbs",
+    "stylesVanillaFeatures": {},
+    "stylesAlways": [],
+    "stylesImported": [],
+    "scriptsRequired": [
+      {
+        "as": "App",
+        "from": "assets/scripts/App.js",
+        "init": "window.app = new App();",
+        "resolved": "./App"
+      }
+    ],
+    "scriptsShimmed": [],
+    "frameworkVanillaFeatures": {}
+  }
+}

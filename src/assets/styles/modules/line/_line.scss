@@ -1,0 +1,19 @@
+.line {
+    border: 0;
+    width: 30rem;
+    margin: 1.5rem auto;
+    height: 0.5rem;
+    overflow: hidden;
+    background: repeat-x 50%;
+    // background-image: image-url('dotted.png');
+    background-size: auto 100%;
+
+    max-width: 80%;
+
+    &:before {
+        font-size: 1.8rem;
+        content: '\2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022';
+        position: relative;
+        top: -0.3em;
+    }
+}
