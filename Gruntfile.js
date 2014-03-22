@@ -264,7 +264,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: '<%= env.DIR_SRC %>',
                     dest: '<%= env.DIR_DEST %>',
-                    src: ['assets/scripts/*.js']
+                    src: ['assets/scripts/main.js']
                 }]
             }
         },
