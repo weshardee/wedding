@@ -1,0 +1,10 @@
+.slider {
+    @include stretch;
+    z-index: 0;
+}
+
+.slider > * {
+    @include background-size(cover);
+    @include stretch;
+    z-index: 0;
+}
