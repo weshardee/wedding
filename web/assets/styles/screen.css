@@ -276,9 +276,15 @@ a {
   display: inline-block;
   font-size: 2.38095rem;
   margin: 1.5rem auto;
+  vertical-align: middle;
+  -webkit-transform: scale(1.5) translateY(0.1rem);
+  -moz-transform: scale(1.5) translateY(0.1rem);
+  -ms-transform: scale(1.5) translateY(0.1rem);
+  -o-transform: scale(1.5) translateY(0.1rem);
+  transform: scale(1.5) translateY(0.1rem);
 }
 
-/* line 18, ../../../src/assets/styles/modules/heart/_heart.scss */
+/* line 21, ../../../src/assets/styles/modules/heart/_heart.scss */
 .heart:before,
 .heart:after {
   position: absolute;
@@ -305,11 +311,42 @@ a {
   transform-origin: 0 100%;
 }
 
-/* line 34, ../../../src/assets/styles/modules/heart/_heart.scss */
+/* line 37, ../../../src/assets/styles/modules/heart/_heart.scss */
 .heart:after {
   -webkit-transform: scaleX(-1) rotate(-27deg);
   -moz-transform: scaleX(-1) rotate(-27deg);
   -ms-transform: scaleX(-1) rotate(-27deg);
   -o-transform: scaleX(-1) rotate(-27deg);
   transform: scaleX(-1) rotate(-27deg);
+}
+
+/* line 3, ../../../src/assets/styles/modules/controller/_controller.scss */
+.controller {
+  background-image: url('/web/assets/media/images/controllers.png?1395468606');
+  background-size: 20rem;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  display: inline-block;
+  width: 9.6rem;
+  height: 5rem;
+  vertical-align: middle;
+  margin: 1.5rem -1.3rem;
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+
+/* line 15, ../../../src/assets/styles/modules/controller/_controller.scss */
+.controller_r {
+  width: 10rem;
+  background-position: 100%;
+  height: 5.7rem;
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  transform: rotate(20deg);
 }

@@ -13,6 +13,9 @@ $HEART_ANGLE: -27deg;
     display: inline-block;
     font-size: $HEART_HEIGHT / 1.26;
     margin: 1.5rem auto;
+    vertical-align: middle;
+
+    @include transform(scale(1.5) translateY(0.1rem));
 }
 .heart:before,
 .heart:after {
