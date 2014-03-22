@@ -123,9 +123,10 @@ a {
   right: 0;
   position: fixed;
   bottom: 0;
+  display: none;
 }
 
-/* line 7, landmarks/nav/_nav.scss */
+/* line 8, landmarks/nav/_nav.scss */
 .navLink {
   float: left;
   background: rgba(0, 0, 0, 0.05);
@@ -144,7 +145,7 @@ a {
   -o-transition: all, 100ms;
   transition: all, 100ms;
 }
-/* line 23, landmarks/nav/_nav.scss */
+/* line 24, landmarks/nav/_nav.scss */
 .navLink:hover {
   line-height: 60px;
   top: -10px;
