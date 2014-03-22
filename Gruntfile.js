@@ -264,7 +264,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: '<%= env.DIR_SRC %>',
                     dest: '<%= env.DIR_DEST %>',
-                    src: ['assets/scripts/*.js']
+                    src: ['assets/scripts/main.js']
                 }]
             }
         },
@@ -344,7 +344,7 @@ module.exports = function(grunt) {
     grunt.registerTask('media', ['copy:media']);
     grunt.registerTask('markup', ['hbt', 'prettify']);
     if (grunt.option('dev')) {
-        grunt.registerTask('styles', ['compass', 'copy:styles']);
+        grunt.registerTask('styles', ['compass']);
     } else {
         grunt.registerTask('styles', ['useminPrepare', 'concat', 'cssmin', 'usemin']);
     }
