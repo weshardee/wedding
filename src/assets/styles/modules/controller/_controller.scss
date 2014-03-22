@@ -1,0 +1,21 @@
+$CONTROLLER_ANGLE: 20deg;
+
+.controller {
+    background-image: image-url('controllers.png');
+    background-size: 20rem;
+    @include hide-text;
+    display: inline-block;
+    width: 9.6rem;
+    height: 5rem;
+    vertical-align: middle;
+    margin: 0 -1.3rem 1.3rem;
+    @include transform(rotate(-$CONTROLLER_ANGLE));
+}
+
+.controller_r {
+    width: 10rem;
+    background-position: 100%;
+    height: 5.7rem;
+
+    @include transform(rotate($CONTROLLER_ANGLE));
+}
