@@ -30,9 +30,9 @@ $HEART_ANGLE: -27deg;
 
     background: $COLOR_GREEN;
 
-    @include border-radius(100% 60% 100% 0);
+    border-radius: 100% 60% 100% 0;
     @include transform(rotate($HEART_ANGLE));
-    @include transform-origin(0, 100%);
+    @include transform-origin(0 100%);
 }
 .heart:after {
     @include transform(scaleX(-1) rotate($HEART_ANGLE));
