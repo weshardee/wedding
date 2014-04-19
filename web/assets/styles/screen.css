@@ -2,103 +2,21 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-html {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-q, blockquote {
-  quotes: none;
-}
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-a img {
-  border: none;
-}
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
-
 *, :after, :before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 html {
-  font-size: 12px;
-}
+  font-size: 12px; }
 
 body {
-  font-family: "Quicksand";
+  font-family: 'Quicksand';
   background: #565759;
-  text-align: center;
-  color: #99999b;
-}
-body:before, body:after {
-  font: "Pompiere";
-  font-size: 1.4rem;
-  word-wrap: break-word;
-  overflow: hidden;
-  height: 4rem;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 -1.1rem;
-  text-align: center;
-  opacity: 0.25;
-}
-body:before {
-  content: '11010010110101000010000010010110000010100001101001000110100110010011010101010100010001011000010000100100000100110100100100110110001000001100100001001001101001001011000000100010100100110010001001101101000100010001011010001000010110100100110101001100010000101000001101101101000110010011000101010100000001101001000010001000101000011000100100100110110000101010100000111101001011010100001000001001011000001010000110100100011010011001001101010101010001000101100001000010010000010011010010010011011000100000110010000100100110100100101100000010001010010011001000100110110100010001000101101000100001011010010011010100110001000010100000110110110100011001001100010101010000000110100100001000100010100001100010010010011011000010101010000011';
-  top: 1rem;
-}
-body:after {
-  content: '11011010001100100110001010101000000011010010000100010001010000110001001001001101100001010101000001111010010110101000010000010010110000010100001101001000110100110010011010101010100010001011000010000100100000100110100100100110110001000001100100001001001101001001011000000100010100100110010001001101101000100010001011010001000010110100100110101001100010000101000001101101101000110010011000101010100000001101001000010001000101000011000100100100110110000101010100000111101001011010100001000001001011000001010000110100100011010011001001101010101010001000101100001000010010000010011010010010011011000100000110010000100100110100100101100000010001010010011001000100110110100010001000101101000100001011010010011010100110001000010100000110';
-  bottom: 1rem;
-}
+  color: #99999b; }
 
 a {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .nav {
   position: absolute;
@@ -106,8 +24,7 @@ a {
   right: 0;
   position: fixed;
   bottom: 0;
-  display: none;
-}
+  display: none; }
 
 .navLink {
   float: left;
@@ -124,14 +41,11 @@ a {
   color: #99999b;
   -webkit-transition: all, 100ms;
   -moz-transition: all, 100ms;
-  -o-transition: all, 100ms;
-  transition: all, 100ms;
-}
-.navLink:hover {
-  line-height: 60px;
-  top: -10px;
-  color: #98c9c3;
-}
+  transition: all, 100ms; }
+  .navLink:hover {
+    line-height: 60px;
+    top: -10px;
+    color: #98c9c3; }
 
 .main {
   position: absolute;
@@ -143,80 +57,69 @@ a {
   -moz-transform: translate(-50%, -55%);
   -ms-transform: translate(-50%, -55%);
   -o-transform: translate(-50%, -55%);
-  transform: translate(-50%, -55%);
-}
+  transform: translate(-50%, -55%); }
 
 .hList {
-  overflow: hidden;
-  *zoom: 1;
-}
+  *zoom: 1; }
+  .hList:before, .hList:after {
+    content: " ";
+    display: table; }
+  .hList:after {
+    clear: both; }
 
 .hList > * {
-  float: left;
-}
+  float: left; }
 
 .slider {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 0;
-}
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 0; }
 
 .slider > * {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 0;
-}
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 0; }
 
 .txt {
-  font-family: "Quicksand";
+  font-family: 'Quicksand';
   font-size: 2rem;
-  margin: 0 auto 1.5rem;
-}
+  margin: 0 auto 1.5rem; }
 
 .txt_huge {
-  font-family: "Pompiere";
-  font-size: 7.0rem;
+  font-family: 'Pompiere';
+  font-size: 7rem;
   color: #e0e9a7;
-  margin-bottom: 0.7rem;
-}
+  margin-bottom: 0.7rem; }
 
 .txt_save {
-  font-family: "Pompiere";
-  font-size: 3.0rem;
+  font-family: 'Pompiere';
+  font-size: 3rem;
   color: #ffffff;
-  margin-bottom: 1.2rem;
-}
+  margin-bottom: 1.2rem; }
 
 .txt_sub {
   font-size: 1.6rem;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 .txt_date {
   font-size: 4rem;
   margin-bottom: 0.5rem;
-  color: #98c9c3;
-}
+  color: #98c9c3; }
 
 .txt_url {
   font-size: 2rem;
-  margin-bottom: 1rem;
-}
+  margin-bottom: 1rem; }
 
 .txt_loc {
   font-size: 2.3rem;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 .line {
   border: 0;
@@ -226,14 +129,12 @@ a {
   overflow: hidden;
   background: repeat-x 50%;
   background-size: auto 100%;
-  max-width: 80%;
-}
-.line:before {
-  font-size: 1.8rem;
-  content: '\2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022';
-  position: relative;
-  top: -0.3em;
-}
+  max-width: 80%; }
+  .line:before {
+    font-size: 1.8rem;
+    content: '\2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022  \2022';
+    position: relative;
+    top: -0.3em; }
 
 .heart {
   position: relative;
@@ -247,11 +148,9 @@ a {
   -moz-transform: scale(1.5) translateY(0.1rem);
   -ms-transform: scale(1.5) translateY(0.1rem);
   -o-transform: scale(1.5) translateY(0.1rem);
-  transform: scale(1.5) translateY(0.1rem);
-}
+  transform: scale(1.5) translateY(0.1rem); }
 
-.heart:before,
-.heart:after {
+.heart:before, .heart:after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -259,10 +158,6 @@ a {
   width: 1.1em;
   height: 0.9em;
   background: #e0e9a7;
-  -webkit-border-radius: 100% 60% 100% 0;
-  -moz-border-radius: 100% 60% 100% 0;
-  -ms-border-radius: 100% 60% 100% 0;
-  -o-border-radius: 100% 60% 100% 0;
   border-radius: 100% 60% 100% 0;
   -webkit-transform: rotate(-27deg);
   -moz-transform: rotate(-27deg);
@@ -273,23 +168,21 @@ a {
   -moz-transform-origin: 0 100%;
   -ms-transform-origin: 0 100%;
   -o-transform-origin: 0 100%;
-  transform-origin: 0 100%;
-}
+  transform-origin: 0 100%; }
 
 .heart:after {
   -webkit-transform: scaleX(-1) rotate(-27deg);
   -moz-transform: scaleX(-1) rotate(-27deg);
   -ms-transform: scaleX(-1) rotate(-27deg);
   -o-transform: scaleX(-1) rotate(-27deg);
-  transform: scaleX(-1) rotate(-27deg);
-}
+  transform: scaleX(-1) rotate(-27deg); }
 
 .controller {
-  background-image: url('../media/images/controllers.png?1395471599');
+  background-image: url("/controllers.png");
   background-size: 20rem;
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
   display: inline-block;
   width: 9.6rem;
   height: 5rem;
@@ -299,8 +192,7 @@ a {
   -moz-transform: rotate(-20deg);
   -ms-transform: rotate(-20deg);
   -o-transform: rotate(-20deg);
-  transform: rotate(-20deg);
-}
+  transform: rotate(-20deg); }
 
 .controller_r {
   width: 10rem;
@@ -310,5 +202,25 @@ a {
   -moz-transform: rotate(20deg);
   -ms-transform: rotate(20deg);
   -o-transform: rotate(20deg);
-  transform: rotate(20deg);
-}
+  transform: rotate(20deg); }
+
+.wrapper {
+  text-align: center; }
+  .wrapper:before, .wrapper:after {
+    font-family: 'Pompiere';
+    font-size: 1.4rem;
+    word-wrap: break-word;
+    overflow: hidden;
+    height: 5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 -1.1rem;
+    text-align: center;
+    opacity: 0.25; }
+  .wrapper:before {
+    content: '11010010110101000010000010010110000010100001101001000110100110010011010101010100010001011000010000100100000100110100100100110110001000001100100001001001101001001011000000100010100100110010001001101101000100010001011010001000010110100100110101001100010000101000001101101101000110010011000101010100000001101001000010001000101000011000100100100110110000101010100000111101001011010100001000001001011000001010000110100100011010011001001101010101010001000101100001000010010000010011010010010011011000100000110010000100100110100100101100000010001010010011001000100110110100010001000101101000100001011010010011010100110001000010100000110110110100011001001100010101010000000110100100001000100010100001100010010010011011000010101010000011';
+    top: 1rem; }
+  .wrapper:after {
+    content: '11011010001100100110001010101000000011010010000100010001010000110001001001001101100001010101000001111010010110101000010000010010110000010100001101001000110100110010011010101010100010001011000010000100100000100110100100100110110001000001100100001001001101001001011000000100010100100110010001001101101000100010001011010001000010110100100110101001100010000101000001101101101000110010011000101010100000001101001000010001000101000011000100100100110110000101010100000111101001011010100001000001001011000001010000110100100011010011001001101010101010001000101100001000010010000010011010010010011011000100000110010000100100110100100101100000010001010010011001000100110110100010001000101101000100001011010010011010100110001000010100000110';
+    bottom: 1rem; }

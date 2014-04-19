@@ -235,6 +235,19 @@ module.exports = function(grunt) {
             }
         },
 
+        sass: {
+            options: {
+                includePaths: ['<%= env.DIR_BOWER %>/bourbon/app/assets/stylesheets']
+            },
+            dist: {
+                options: {
+                    outputStyle: 'extended'
+                },
+                files: {
+                    '<%= env.DIR_DEST %>/assets/styles/screen.css': '<%= env.DIR_SRC %>/assets/styles/screen.scss'
+                }
+            }
+        },
 
         cssmin: {
             options: {
@@ -344,7 +357,7 @@ module.exports = function(grunt) {
     grunt.registerTask('media', ['copy:media']);
     grunt.registerTask('markup', ['hbt', 'prettify']);
     if (grunt.option('dev')) {
-        grunt.registerTask('styles', ['compass']);
+        grunt.registerTask('styles', ['sass']);
     } else {
         grunt.registerTask('styles', ['useminPrepare', 'concat', 'cssmin', 'usemin']);
     }
