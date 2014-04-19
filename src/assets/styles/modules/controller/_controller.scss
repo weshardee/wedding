@@ -1,7 +1,7 @@
 $CONTROLLER_ANGLE: 20deg;
 
 .controller {
-    background-image: image-url('controllers.png');
+    background-image: url('#{$IMG_PATH}/controllers.png');
     background-size: 20rem;
     @include hide-text;
     display: inline-block;
