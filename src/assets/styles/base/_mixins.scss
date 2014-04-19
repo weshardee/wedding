@@ -1,0 +1,9 @@
+@mixin stretch-x {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+@mixin stretch {
+    @include position(absolute, 0px 0px 0px 0px);
+}
