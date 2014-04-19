@@ -32,7 +32,6 @@
     "decomponentify": "0.0.3",
     "deglobalify": "0.2.0",
     "grunt-browserify": "1.2.11",
-    "grunt-contrib-compass": "^0.7.2",
     "grunt-sass": "^0.12.1"
   },
   "scripts": {
