@@ -1,7 +1,10 @@
+$navLink-OFFSET: $NAV_HEIGHT / 10;
+
 .nav {
     @include stretch-x;
     position: fixed;
     bottom: 0;
+    z-index: 1; // above wrapper
 }
 
 .navLink {
@@ -11,9 +14,9 @@
     width: 33%;
     text-align: center;
     font-size: 1.3rem;
-    line-height: 50px;
-    height: 60px;
-    margin-bottom: -10px;
+    line-height: $NAV_HEIGHT - $navLink-OFFSET;
+    height: $NAV_HEIGHT;
+    margin-bottom: -$navLink-OFFSET;
     position: relative;
     top: 0;
     color: $COLOR_LIGHT;
@@ -21,8 +24,8 @@
     @include transition(all, 100ms);
 
     &:hover {
-        line-height: 60px;
-        top: -10px;
+        line-height: $NAV_HEIGHT;
+        top: -$navLink-OFFSET;
         color: $COLOR_BLUE;
     }
 }
