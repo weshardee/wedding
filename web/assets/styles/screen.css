@@ -117,6 +117,7 @@ a {
   top: 0;
   color: #99999b;
   text-decoration: none;
+  text-transform: uppercase;
   border-top: 0.3rem solid #99999b;
   opacity: 0.7;
   -webkit-transition: all, 100ms;
