@@ -85,6 +85,14 @@ module.exports = function(grunt) {
         // Copies any files that should be moved to the destination directory
         // that are not already handled by another task.
         copy: {
+            dns: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= env.DIR_SRC %>',
+                    src: ['CNAME'],
+                    dest: '<%= env.DIR_DEST %>'
+                }]
+            },
             media: {
                 files: [{
                     expand: true,
@@ -323,7 +331,7 @@ module.exports = function(grunt) {
         // tasks should be registered at the bottom of this file.
         concurrent: {
             lint: ['csslint', 'jshint'],
-            build: ['media', 'markup', 'styles', 'scripts'],
+            build: ['copy:dns', 'media', 'markup', 'styles', 'scripts'],
             docs: ['yuidoc']
         }
     });
