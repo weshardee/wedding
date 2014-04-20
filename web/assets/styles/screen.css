@@ -94,7 +94,7 @@ body {
   color: #99999b; }
 
 a {
-  text-decoration: none; }
+  color: #98c9c3; }
 
 .nav {
   position: absolute;
@@ -102,35 +102,40 @@ a {
   right: 0;
   position: fixed;
   bottom: 0;
-  display: none; }
+  z-index: 1; }
 
 .navLink {
   float: left;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.1);
   margin: 0 0.15%;
   width: 33%;
   text-align: center;
   font-size: 1.3rem;
-  line-height: 50px;
-  height: 60px;
-  margin-bottom: -10px;
+  line-height: 4.7rem;
+  height: 5rem;
   position: relative;
   top: 0;
   color: #99999b;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-top: 0.3rem solid #99999b;
+  opacity: 0.7;
   -webkit-transition: all, 100ms;
   -moz-transition: all, 100ms;
   transition: all, 100ms; }
   .navLink:hover {
-    line-height: 60px;
-    top: -10px;
-    color: #98c9c3; }
+    color: #98c9c3;
+    border-top-width: 0.3rem;
+    border-color: #98c9c3;
+    opacity: 1; }
 
 .main {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 100%;
-  padding: 2rem;
+  max-width: 50rem;
+  padding: 4rem;
   -webkit-transform: translate(-50%, -55%);
   -moz-transform: translate(-50%, -55%);
   -ms-transform: translate(-50%, -55%);
@@ -167,7 +172,7 @@ a {
 
 .txt {
   font-family: 'Quicksand';
-  font-size: 2rem;
+  font-size: 1.9rem;
   margin: 0 auto 1.5rem; }
 
 .txt_huge {
@@ -198,6 +203,9 @@ a {
 .txt_loc {
   font-size: 2.3rem;
   text-transform: uppercase; }
+
+.txt_lg {
+  font-size: 2.4rem; }
 
 .line {
   border: 0;
@@ -301,4 +309,4 @@ a {
     top: 1rem; }
   .wrapper:after {
     content: '11011010001100100110001010101000000011010010000100010001010000110001001001001101100001010101000001111010010110101000010000010010110000010100001101001000110100110010011010101010100010001011000010000100100000100110100100100110110001000001100100001001001101001001011000000100010100100110010001001101101000100010001011010001000010110100100110101001100010000101000001101101101000110010011000101010100000001101001000010001000101000011000100100100110110000101010100000111101001011010100001000001001011000001010000110100100011010011001001101010101010001000101100001000010010000010011010010010011011000100000110010000100100110100100101100000010001010010011001000100110110100010001000101101000100001011010010011010100110001000010100000110';
-    bottom: 1rem; }
+    bottom: 6rem; }
