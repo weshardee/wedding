@@ -111,19 +111,19 @@ a {
   width: 33%;
   text-align: center;
   font-size: 1.3rem;
-  line-height: 3.33rem;
+  line-height: 3.7rem;
   height: 3.7rem;
-  margin-bottom: -0.37rem;
   position: relative;
   top: 0;
   color: #99999b;
+  border-top: 0.37rem solid #99999b;
   -webkit-transition: all, 100ms;
   -moz-transition: all, 100ms;
   transition: all, 100ms; }
   .navLink:hover {
-    line-height: 3.7rem;
-    top: -0.37rem;
-    color: #98c9c3; }
+    border-top-width: 0.37rem;
+    border-color: #98c9c3;
+    line-height: 3.33rem; }
 
 .main {
   position: absolute;
