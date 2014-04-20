@@ -14,18 +14,22 @@ $navLink-OFFSET: $NAV_HEIGHT / 10;
     width: 33%;
     text-align: center;
     font-size: 1.3rem;
-    line-height: $NAV_HEIGHT - $navLink-OFFSET;
+    line-height: $NAV_HEIGHT;
     height: $NAV_HEIGHT;
-    margin-bottom: -$navLink-OFFSET;
     position: relative;
     top: 0;
     color: $COLOR_LIGHT;
 
+    border-top: $navLink-OFFSET solid $COLOR_LIGHT;
+
     @include transition(all, 100ms);
 
     &:hover {
-        line-height: $NAV_HEIGHT;
-        top: -$navLink-OFFSET;
-        color: $COLOR_BLUE;
+        // line-height: $NAV_HEIGHT;
+        // top: -$navLink-OFFSET;
+        // color: $COLOR_BLUE;
+        border-top-width: $navLink-OFFSET;
+        border-color: $COLOR_BLUE;
+        line-height: $NAV_HEIGHT - $navLink-OFFSET;
     }
 }
