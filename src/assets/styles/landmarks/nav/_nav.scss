@@ -14,7 +14,7 @@ $navLink-OFFSET: $NAV_HEIGHT / 12;
     width: 33%;
     text-align: center;
     font-size: 1.3rem;
-    line-height: $NAV_HEIGHT * 0.9;
+    line-height: $NAV_HEIGHT - $navLink-OFFSET;
     height: $NAV_HEIGHT;
     position: relative;
     top: 0;
