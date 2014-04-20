@@ -23,8 +23,7 @@ a {
   left: 0;
   right: 0;
   position: fixed;
-  bottom: 0;
-  display: none; }
+  bottom: 0; }
 
 .navLink {
   float: left;
