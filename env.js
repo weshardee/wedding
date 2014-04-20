@@ -19,7 +19,7 @@ var Config = {
      * @property URL_SITE
      * @type String
      */
-    URL_SITE: '//www.example.com',       // protocol-relative address
+    URL_SITE: '//www.wesandamanda.com',       // protocol-relative address
 //  URL_SITE: 'https://www.example.com', // absolute address
 
     /**
