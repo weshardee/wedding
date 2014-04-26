@@ -2,6 +2,10 @@
     @include box-sizing(border-box);
 }
 
+html, body {
+    height: 100%; // for vertical centering
+}
+
 html {
     font-size: 12px;
 }
@@ -10,6 +14,7 @@ body {
     font-family: $FONT;
     background: $COLOR_GREY;
     color: $COLOR_LIGHT;
+    text-align: center;
 }
 
 a {

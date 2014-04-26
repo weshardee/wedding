@@ -1,19 +1,25 @@
-$nav-BORDER_WIDTH: 0.3rem;
+$nav-BORDER_WIDTH: 0.2rem;
 
 .nav {
-    @include stretch-x;
-    position: fixed;
+    margin: auto;
     bottom: 0;
     z-index: 1; // above wrapper
+    text-align: center;
+    max-width: 35rem;
+    // opacity: 0.9;
+
+    > * {
+        width: 33%;
+        padding: 0 .15rem;
+        float: left;
+    }
 }
 
 .nav-i-a {
-    float: left;
-    background: rgba(0,0,0,0.1);
-    margin: 0 0.15%;
-    width: 33%;
+    background: shade($COLOR_GREY, 5%);
+    display: block;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: $NAV_HEIGHT - $nav-BORDER_WIDTH;
     height: $NAV_HEIGHT;
     position: relative;
@@ -22,22 +28,13 @@ $nav-BORDER_WIDTH: 0.3rem;
     text-decoration: none;
     text-transform: uppercase;
 
-    border-top: $nav-BORDER_WIDTH solid;
-    opacity: 0.9;
+    border-bottom: $nav-BORDER_WIDTH solid;
 
     @include transition(all, 100ms);
 
-    &:hover {
-        color: $COLOR_GREEN;
-        opacity: 1;
-    }
+    &:hover { color: $COLOR_GREEN; }
 }
 
 .nav-i-a_isActive {
-    color: $COLOR_BLUE;
-    opacity: 1;
-
-    &:hover {
-        color: $COLOR_BLUE;
-    }
+    &, &:hover { color: $COLOR_BLUE; }
 }

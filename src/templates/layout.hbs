@@ -24,17 +24,20 @@
 </head>
 <body>
 
-    <ul role="nav" class="nav">
-        <li><a class="nav-i-a {{#block "nav-event"}}{{/block}}" href="/">Event</a></li>
-        <li><a class="nav-i-a {{#block "nav-registry"}}{{/block}}" href="registry.html">Registry</a></li>
-        <li><a class="nav-i-a {{#block "nav-travel"}}{{/block}}" href="travel.html">Travel</a></li>
-    </ul>
+    <div class="wrapper wrapper_nav">
+        <ul role="nav" class="nav">
+            <li><a class="nav-i-a {{#block "nav-event"}}{{/block}}" href="/">Event</a></li>
+            <li><a class="nav-i-a {{#block "nav-registry"}}{{/block}}" href="registry.html">Registry</a></li>
+            <li><a class="nav-i-a {{#block "nav-travel"}}{{/block}}" href="travel.html">Travel</a></li>
+        </ul>
+    </div>
 
-    <div class="wrapper">
-        <!-- CONTENT -->
-        <div class="main">
-        {{#block "body"}}
-        {{/block}}
+    <!-- CONTENT -->
+    <div class="main">
+        <div class="main-bd">
+            <div class="main-bd-bd">
+                {{#block "body"}} {{/block}}
+            </div>
         </div>
     </div>
 
