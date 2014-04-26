@@ -1,33 +1,8 @@
+
 .txt {
     font-family: $FONT;
     font-size: 1.9rem;
     margin: $SPACING 0;
-}
-
-.txt_huge {
-    font-family: $FONT_ALT;
-    font-size: 7.0rem;
-    color: $COLOR_GREEN;
-    margin: 0.7rem 0;
-}
-
-.txt_h2 {
-    font-family: $FONT_ALT;
-    font-size: 5.0rem;
-    color: $COLOR_GREEN;
-}
-
-.txt_h3 {
-    font-family: $FONT_ALT;
-    font-size: 2.5rem;
-    color: $COLOR_BLUE;
-}
-
-.txt_save {
-    font-family: $FONT_ALT;
-    font-size: 3.0rem;
-    color: #ffffff;
-    margin-bottom: 1.2rem;
 }
 
 .txt_sub {
@@ -37,21 +12,16 @@
 
 .txt_date {
     font-size: 4rem;
-    margin-bottom: 0.5rem;
     color: $COLOR_BLUE;
-    margin-top: 0;
 }
 
 .txt_url {
     font-size: 2rem;
-    margin-bottom: 1rem;
-    margin-top: 0;
 }
 
 .txt_loc {
     font-size: 2.3rem;
     text-transform: uppercase;
-    margin-top: 0;
 }
 
 .txt_lg {

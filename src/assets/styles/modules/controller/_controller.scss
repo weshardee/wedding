@@ -19,3 +19,31 @@ $CONTROLLER_ANGLE: 20deg;
 
     @include transform(rotate($CONTROLLER_ANGLE));
 }
+
+
+.controllerLove {
+    font-size: 5rem;
+    margin: $SPACING;
+
+    &:before, &:after {
+        content: '';
+        background-image: url('#{$IMG_PATH}/controllers.png');
+        background-size: 20rem;
+        @include hide-text;
+        display: inline-block;
+        width: 9.6rem;
+        height: 5rem;
+        vertical-align: middle;
+        margin: 0 -$SPACING * 2;
+        @include transform(rotate(-$CONTROLLER_ANGLE));
+    }
+
+    &:after {
+        width: 10rem;
+        background-position: 100%;
+        height: 5.7rem;
+
+        @include transform(rotate($CONTROLLER_ANGLE));
+    }
+
+}

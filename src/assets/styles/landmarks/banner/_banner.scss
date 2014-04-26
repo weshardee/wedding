@@ -1,0 +1,31 @@
+.banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $LAYER_NAV;
+
+    padding: 0 $SPACING;
+    overflow: hidden;
+    background: shade($COLOR_GREY, 12%);
+
+    height: $NAV_HEIGHT;
+    line-height: $NAV_HEIGHT;
+
+    > * {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    > * + * {
+        margin-left: $SPACING;
+    }
+}
+
+.banner-title {
+    // float: left;
+}
+
+.banner-nav {
+    // float: right;
+}

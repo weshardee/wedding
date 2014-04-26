@@ -7,11 +7,11 @@ $nav-BORDER_WIDTH: 0.2rem;
     text-align: center;
     max-width: 35rem;
     // opacity: 0.9;
+    display: table;
 
     > * {
-        width: 33%;
         padding: 0 .15rem;
-        float: left;
+        display: table-cell;
     }
 }
 
@@ -22,11 +22,11 @@ $nav-BORDER_WIDTH: 0.2rem;
     font-size: 1.1rem;
     line-height: $NAV_HEIGHT - $nav-BORDER_WIDTH;
     height: $NAV_HEIGHT;
-    position: relative;
-    top: 0;
     color: $COLOR_LIGHT;
     text-decoration: none;
     text-transform: uppercase;
+
+    padding: 0 $SPACING;
 
     border-bottom: $nav-BORDER_WIDTH solid;
 

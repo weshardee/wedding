@@ -1,0 +1,31 @@
+
+.hdg {
+    font-family: $FONT_ALT;
+    margin: $SPACING;
+    position: relative;
+    top: 0.1em;
+}
+
+.hdg_1, .hdg_huge {
+    font-family: $FONT_ALT;
+    font-size: 7.0rem;
+    color: $COLOR_GREEN;
+}
+
+.hdg_2, .hdg_h2 {
+    font-family: $FONT_ALT;
+    font-size: 5.0rem;
+    color: $COLOR_GREEN;
+}
+
+.hdg_3, .hdg_save {
+    font-family: $FONT_ALT;
+    font-size: 3.0rem;
+    color: #ffffff;
+}
+
+.hdg_4, .hdg_h3 {
+    font-family: $FONT_ALT;
+    font-size: 2.5rem;
+    color: $COLOR_BLUE;
+}

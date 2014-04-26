@@ -1,5 +1,6 @@
-$HEART_HEIGHT: 3rem;
-
+$HEART_SIZE: 4rem;
+$HEART_WIDTH: 1em;
+$HEART_HEIGHT: 0.8em;
 $HEART_POINT_RADIUS: 10px;
 $HEART_LUMP_WIDTH: 50px;
 $HEART_SIDE_LENGTH: $HEART_LUMP_WIDTH * 1;
@@ -8,32 +9,14 @@ $HEART_ANGLE: -27deg;
 
 .heart {
     position: relative;
-    width: $HEART_HEIGHT * 1.22;
-    height: $HEART_HEIGHT;
+
     display: inline-block;
-    font-size: $HEART_HEIGHT / 1.26;
-    margin: 1.5rem auto;
+    width: $HEART_WIDTH;
+    height: $HEART_HEIGHT;
     vertical-align: middle;
+    background: url(../media/images/heart.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 
-    @include transform(scale(1.5) translateY(0.1rem));
-}
-.heart:before,
-.heart:after {
-    position: absolute;
-    content: "";
-
-    bottom: 0;
-    left: 51%;
-
-    width: 1.1em;
-    height: 0.9em;
-
-    background: $COLOR_GREEN;
-
-    border-radius: 100% 60% 100% 0;
-    @include transform(rotate($HEART_ANGLE));
-    @include transform-origin(0 100%);
-}
-.heart:after {
-    @include transform(scaleX(-1) rotate($HEART_ANGLE));
+    // @include transform(scale(1.5) translateY(0.1rem));
 }
