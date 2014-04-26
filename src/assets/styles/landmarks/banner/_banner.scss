@@ -5,7 +5,6 @@
     left: 0;
     z-index: $LAYER_NAV;
 
-    padding: 0 $SPACING;
     overflow: hidden;
     background: shade($COLOR_GREY, 12%);
 
@@ -16,16 +15,4 @@
         display: inline-block;
         vertical-align: top;
     }
-
-    > * + * {
-        margin-left: $SPACING;
-    }
-}
-
-.banner-title {
-    // float: left;
-}
-
-.banner-nav {
-    // float: right;
 }
