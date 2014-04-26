@@ -16,3 +16,12 @@ a {
     // text-decoration: none;
     color: $COLOR_BLUE;
 }
+
+.isHidden {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
