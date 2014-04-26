@@ -109,11 +109,11 @@ a {
   bottom: 0;
   z-index: 1;
   text-align: center;
-  max-width: 35rem; }
+  max-width: 35rem;
+  display: table; }
   .nav > * {
-    width: 33%;
     padding: 0 0.15rem;
-    float: left; }
+    display: table-cell; }
 
 .nav-i-a {
   background: #515254;
@@ -122,11 +122,10 @@ a {
   font-size: 1.1rem;
   line-height: 2.8rem;
   height: 3rem;
-  position: relative;
-  top: 0;
   color: #99999b;
   text-decoration: none;
   text-transform: uppercase;
+  padding: 0 1.5rem;
   border-bottom: 0.2rem solid;
   -webkit-transition: all, 100ms;
   -moz-transition: all, 100ms;
@@ -172,6 +171,25 @@ a {
   max-width: 42rem;
   margin: auto; }
 
+.banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 200;
+  padding: 0 1.5rem;
+  overflow: hidden;
+  background: #4b4c4e;
+  height: 3rem;
+  line-height: 3rem; }
+  .banner > * {
+    display: inline-block;
+    vertical-align: top; }
+  .banner > * + * {
+    margin-left: 1.5rem; }
+
+
+
 .hList {
   *zoom: 1; }
   .hList:before, .hList:after {
@@ -205,50 +223,49 @@ a {
   font-size: 1.9rem;
   margin: 1.5rem 0; }
 
-.txt_huge {
-  font-family: 'Pompiere';
-  font-size: 7rem;
-  color: #e0e9a7;
-  margin: 0.7rem 0; }
-
-.txt_h2 {
-  font-family: 'Pompiere';
-  font-size: 5rem;
-  color: #e0e9a7; }
-
-.txt_h3 {
-  font-family: 'Pompiere';
-  font-size: 2.5rem;
-  color: #98c9c3; }
-
-.txt_save {
-  font-family: 'Pompiere';
-  font-size: 3rem;
-  color: #ffffff;
-  margin-bottom: 1.2rem; }
-
 .txt_sub {
   font-size: 1.6rem;
   text-transform: uppercase; }
 
 .txt_date {
   font-size: 4rem;
-  margin-bottom: 0.5rem;
-  color: #98c9c3;
-  margin-top: 0; }
+  color: #98c9c3; }
 
 .txt_url {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  margin-top: 0; }
+  font-size: 2rem; }
 
 .txt_loc {
   font-size: 2.3rem;
-  text-transform: uppercase;
-  margin-top: 0; }
+  text-transform: uppercase; }
 
 .txt_lg {
   font-size: 2.4rem; }
+
+.hdg {
+  font-family: 'Pompiere';
+  margin: 1.5rem;
+  position: relative;
+  top: 0.1em; }
+
+.hdg_1, .hdg_huge {
+  font-family: 'Pompiere';
+  font-size: 7rem;
+  color: #e0e9a7; }
+
+.hdg_2, .hdg_h2 {
+  font-family: 'Pompiere';
+  font-size: 5rem;
+  color: #e0e9a7; }
+
+.hdg_3, .hdg_save {
+  font-family: 'Pompiere';
+  font-size: 3rem;
+  color: #ffffff; }
+
+.hdg_4, .hdg_h3 {
+  font-family: 'Pompiere';
+  font-size: 2.5rem;
+  color: #98c9c3; }
 
 .line {
   border: 0;
@@ -267,44 +284,13 @@ a {
 
 .heart {
   position: relative;
-  width: 3.66rem;
-  height: 3rem;
   display: inline-block;
-  font-size: 2.38095rem;
-  margin: 1.5rem auto;
+  width: 1em;
+  height: 0.8em;
   vertical-align: middle;
-  -webkit-transform: scale(1.5) translateY(0.1rem);
-  -moz-transform: scale(1.5) translateY(0.1rem);
-  -ms-transform: scale(1.5) translateY(0.1rem);
-  -o-transform: scale(1.5) translateY(0.1rem);
-  transform: scale(1.5) translateY(0.1rem); }
-
-.heart:before, .heart:after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 51%;
-  width: 1.1em;
-  height: 0.9em;
-  background: #e0e9a7;
-  border-radius: 100% 60% 100% 0;
-  -webkit-transform: rotate(-27deg);
-  -moz-transform: rotate(-27deg);
-  -ms-transform: rotate(-27deg);
-  -o-transform: rotate(-27deg);
-  transform: rotate(-27deg);
-  -webkit-transform-origin: 0 100%;
-  -moz-transform-origin: 0 100%;
-  -ms-transform-origin: 0 100%;
-  -o-transform-origin: 0 100%;
-  transform-origin: 0 100%; }
-
-.heart:after {
-  -webkit-transform: scaleX(-1) rotate(-27deg);
-  -moz-transform: scaleX(-1) rotate(-27deg);
-  -ms-transform: scaleX(-1) rotate(-27deg);
-  -o-transform: scaleX(-1) rotate(-27deg);
-  transform: scaleX(-1) rotate(-27deg); }
+  background: url(../media/images/heart.png);
+  background-size: 100%;
+  background-repeat: no-repeat; }
 
 .controller {
   background-image: url('../media/images/controllers.png');
@@ -333,6 +319,36 @@ a {
   -o-transform: rotate(20deg);
   transform: rotate(20deg); }
 
+.controllerLove {
+  font-size: 5rem;
+  margin: 1.5rem; }
+  .controllerLove:before, .controllerLove:after {
+    content: '';
+    background-image: url('../media/images/controllers.png');
+    background-size: 20rem;
+    color: transparent;
+    font: 0/0 a;
+    text-shadow: none;
+    display: inline-block;
+    width: 9.6rem;
+    height: 5rem;
+    vertical-align: middle;
+    margin: -3rem;
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    transform: rotate(-20deg); }
+  .controllerLove:after {
+    width: 10rem;
+    background-position: 100%;
+    height: 5.7rem;
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    transform: rotate(20deg); }
+
 .wrapper {
   text-align: center;
   position: relative; }
@@ -342,11 +358,3 @@ a {
   padding-top: 3rem;
   z-index: 100; }
 
-.wrapper_nav {
-  background: #4b4c4e;
-  z-index: 200;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0; }
