@@ -260,7 +260,8 @@ a {
 .hdg_4, .hdg_h3 {
   font-family: 'Pompiere';
   font-size: 2.5rem;
-  color: #98c9c3; }
+  color: #98c9c3;
+  text-transform: uppercase; }
 
 .line {
   border: 0;
