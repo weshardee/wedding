@@ -1,0 +1,14 @@
+.title {
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: $FONT;
+    font-size: 1.7rem;
+    color: $COLOR_LIGHT;
+    line-height: $NAV_HEIGHT;
+    display: inline-block;
+    padding: 0 $SPACING;
+
+    &:hover {
+        background: shade($COLOR_GREY, 5%);
+    }
+}
